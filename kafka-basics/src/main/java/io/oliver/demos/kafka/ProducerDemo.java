@@ -62,9 +62,7 @@ public class ProducerDemo {
                 //
                 ProducerRecord<String, String> producerRecord = new ProducerRecord<>("demo_java", "Hello "+i);
 
-                producer.send(producerRecord, new Callback() {
-                    @Override
-                    public void onCompletion(RecordMetadata metadata, Exception exception) {
+                producer.send(producerRecord, (RecordMetadata metadata, Exception exception) -> {
                         if (exception == null) {
                             log.info("Received new Metadata \n" +
                                     " ---" + metadata.topic().toString() +
@@ -72,7 +70,7 @@ public class ProducerDemo {
                         } else {
                             log.error("exception happened");
                         }
-                    }
+
                 });
             }
 
