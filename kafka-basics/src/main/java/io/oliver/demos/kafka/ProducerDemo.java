@@ -25,6 +25,7 @@ public class ProducerDemo {
         properties.setProperty("sasl.jaas.config","org.apache.kafka.common.security.plain.PlainLoginModule required username='2kNM4QENVpqVZ5NHDHyGkD' password='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguY29uZHVrdG9yLmlvIiwic291cmNlQXBwbGljYXRpb24iOiJhZG1pbiIsInVzZXJNYWlsIjpudWxsLCJwYXlsb2FkIjp7InZhbGlkRm9yVXNlcm5hbWUiOiIya05NNFFFTlZwcVZaNU5IREh5R2tEIiwib3JnYW5pemF0aW9uSWQiOjczNDU2LCJ1c2VySWQiOjg1NDE5LCJmb3JFeHBpcmF0aW9uQ2hlY2siOiJhN2Y4YmQ0NS1kMmM1LTQ2MDQtOGZkMS00MWRlOTY0MDg4MGYifX0.9Y1QKQnx3hsaJ3YtmRILjMllpN7UTJlSMW2W8QYID_w';");
 
 
+        //PRODUCER CONFIG
         properties.setProperty("key.serializer", StringSerializer.class.getName());
         properties.setProperty("value.serializer",StringSerializer.class.getName());
 
